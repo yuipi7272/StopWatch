@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var label: UILabel!
+    // 判定ラベル
+    @IBOutlet var hanteiLabel: UILabel!
     
     var count: Float = 0.0
     var timer: Timer = Timer()
@@ -34,12 +36,16 @@ class ViewController: UIViewController {
                                          userInfo: nil,
                                          repeats: true)
         }
+        hanteiLabel.text = ""
     }
     
     @IBAction func stop() {
         // タイマー動作していたら、停止する
         if timer.isValid {
             timer.invalidate()
+        }
+        if count > 9.80 && count < 10.20 {
+            hanteiLabel.text = "PERFECT!"
         }
     }
     
@@ -50,8 +56,9 @@ class ViewController: UIViewController {
         }
         // countを初期化
         count = 0.0
-        // ラベルに表示
+        // ラベルを初期化
         label.text = String(format: "%.2f", count)
+        hanteiLabel.text = "Result!"
     }
 }
 

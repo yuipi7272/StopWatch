@@ -31,6 +31,12 @@ class ViewController: UIViewController {
     func hantei(){
         if count > 9.80 && count < 10.20 {
             hanteiLabel.text = "PERFECT!"
+        } else if count > 9.70 && count < 10.30 {
+            hanteiLabel.text = "GREAT!"
+        } else if count > 9.50 && count < 10.50 {
+            hanteiLabel.text = "GOOD!"
+        } else {
+            hanteiLabel.text = "BAD!"
         }
     }
     

@@ -61,7 +61,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="resest" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kna-y6-oN8"/>
-                                    <action selector="stop" destination="BYZ-38-t0r" eventType="touchUpInside" id="puL-OU-Nb9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWm-jm-gkt">

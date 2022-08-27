@@ -42,5 +42,16 @@ class ViewController: UIViewController {
             timer.invalidate()
         }
     }
+    
+    @IBAction func resest(){
+        // タイマーが動作していたら、停止する
+        if timer.isValid {
+            timer.invalidate()
+        }
+        // countを初期化
+        count = 0.0
+        // ラベルに表示
+        label.text = String(format: "%.2f", count)
+    }
 }
 

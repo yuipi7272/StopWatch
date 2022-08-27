@@ -20,11 +20,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    // タイマーのカウントアップ
     @objc func up() {
         // countを0.01足す
         count = count + 0.01
         // ラベルに小数点以下2桁まで表示
         label.text = String(format: "%.2f", count)
+    }
+    // 「PERFECT!」を表示するかどうか判定
+    func hantei(){
+        if count > 9.80 && count < 10.20 {
+            hanteiLabel.text = "PERFECT!"
+        }
     }
     
     @IBAction func start() {
@@ -44,9 +51,7 @@ class ViewController: UIViewController {
         if timer.isValid {
             timer.invalidate()
         }
-        if count > 9.80 && count < 10.20 {
-            hanteiLabel.text = "PERFECT!"
-        }
+        self.hantei()
     }
     
     @IBAction func resest(){
